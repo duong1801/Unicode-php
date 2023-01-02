@@ -5,14 +5,12 @@ $actuallyReceived;
 $tax;
 if ($pay >= 15000000) {
     $tax = 30 / 100;
-    $actuallyReceived = $pay - $pay * $tax;
 } elseif ($pay >= 7000000 && $pay < 15000000) {
     $tax = 20 / 100;
-    $actuallyReceived = $pay - $pay * $tax;
 } elseif ($pay < 7000000) {
     $tax = 10 / 100;
-    $actuallyReceived = $pay - $pay * $tax;
 }
+$actuallyReceived = $pay - $pay * $tax;
 $tax *= 100;
 echo "Lương: {$pay} đ" . "<br>"
     . "Thuế thụ nhập cá nhân: {$tax}%" .
